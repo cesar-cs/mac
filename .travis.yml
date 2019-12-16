@@ -1,5 +1,5 @@
 os: osx
-osx_image: xcode11.2
+
 
 script:
   - pip3 install flake8
