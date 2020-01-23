@@ -1,30 +1,5 @@
-matrix:
-  include:
-    - os: osx
-      osx_image: xcode11.3
-    - os: osx
-      osx_image: xcode9.4
-    - os: osx
-      osx_image: xcode8.3
-    - os: osx
-      osx_image: xcode7.3    
-    - os: osx
-      osx_image: xcode11.2  
-    - os: osx
-      osx_image: xcode10.2
-    - os: osx
-      osx_image: xcode10.3
-    - os: osx
-      osx_image: xcode11.1
-    - os: osx
-      osx_image: xcode10.1
-      
-
-script:
-  - pip3 install flake8
-  - which pip3
-  - whereis pip
-  - /usr/local/bin/pip install flake8
-  - cat /Users/travis/.travis/functions
-  - python -m pip install --upgrade pip
-  - pip install flake8
+os: windows
+script: 
+    - df -lh
+    - systeminfo
+language: c
