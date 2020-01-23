@@ -1,4 +1,5 @@
 os: windows
+group: dev
 script: 
     - df -lh
     - systeminfo
