@@ -1,4 +1,4 @@
-os: windows
+os: windows1809
 script: 
     - df -lh
     - systeminfo
