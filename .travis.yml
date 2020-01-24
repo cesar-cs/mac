@@ -1,5 +1,4 @@
-os: windows1809
-group: dev
+os: windows
 script: 
     - df -lh
     - systeminfo
