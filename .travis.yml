@@ -1,18 +1,6 @@
-matrix:
-  include:
-    - os: osx
-            
-language: bash
+os: linux-ppc64le
 
-before_script:
-    - sw_vers
-    - xcodebuild -version
-    - xcodebuild -showsdks
-    - ruby --version
-    - java -version
-    - xcrun simctl list
-    - rvm --version
-    - pod --version
-    - gem which cocoapods
-    - fastlane -v
-    - carthage version
+sudo: required
+
+script: 
+  - uname -a
