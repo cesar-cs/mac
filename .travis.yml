@@ -1,6 +1,18 @@
-os: linux-ppc64le
+os: osx
+osx_image: xcode11.3
 
-sudo: required
+language: bash
 
-script: 
-  - uname -a
+before_script:
+    - sw_vers
+    - xcodebuild -version
+    - xcodebuild -showsdks
+    - ruby --version
+    - java -version
+    - xcrun simctl list
+    - rvm --version
+    - pod --version
+    - gem which cocoapods
+    - fastlane -v
+    - carthage version
+    - xcrun --sdk macosx --show-sdk-path
