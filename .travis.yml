@@ -1,9 +1,10 @@
 os: osx
-osx_image: xcode11.3
+
 
 language: bash
 
 before_script:
+    - system_profiler SPHardwareDataType
     - sw_vers
     - xcodebuild -version
     - xcodebuild -showsdks
