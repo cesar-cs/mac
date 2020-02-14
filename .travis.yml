@@ -1,19 +1,8 @@
-os: osx
+os: linux
+dist: bionic
 
 
 language: bash
 
 before_script:
-    - system_profiler SPHardwareDataType
-    - sw_vers
-    - xcodebuild -version
-    - xcodebuild -showsdks
-    - ruby --version
-    - java -version
-    - xcrun simctl list
-    - rvm --version
-    - pod --version
-    - gem which cocoapods
-    - fastlane -v
-    - carthage version
-    - xcrun --sdk macosx --show-sdk-path
+    - java --version
