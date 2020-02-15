@@ -1,8 +1,10 @@
 os: linux
 dist: bionic
 
-
-language: bash
+jdk:
+  - oraclejdk9
+  - openjdk11
+  - openjdk8
 
 before_script:
     - java --version
