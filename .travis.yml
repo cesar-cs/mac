@@ -1,29 +1,4 @@
-matrix:
-  include:
-    - os: osx
-      osx_image: xcode11.5g
-    - os: osx
-      osx_image: xcode11.4
-
-language: bash
-
-addons:
-  homebrew:
-    packages:
-    - htop
-    
-before_script:
-    - sw_vers
-    - xcodebuild -version
-    - xcodebuild -showsdks
-    - ruby --version
-    - java -version
-    - xcrun simctl list
-    - rvm --version
-    - pod --version
-    - gem which cocoapods
-    - fastlane -v
-    - carthage version
-    - xcrun --sdk macosx --show-sdk-path
-    - brew --version
-    - echo $HOMEBREW_NO_INSTALL_CLEANUP
+os: linux
+arch: ppc64le
+script:
+ - uname -a
