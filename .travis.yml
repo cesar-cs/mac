@@ -1,13 +1,11 @@
-os: osx
-language: ruby
-install: true
-script: true
-rvm:
-- 2.6.0
-- 2.6.1
-- 2.6.2
-- 2.6.3
-- 2.6.4
-- 2.7.0
-- 2.7.1
-- ruby-head
+arch: ppc64le
+dist: bionic
+
+services:
+  - postgresql
+
+script:
+  - uname -a 
+  - psql -c 'create database name;' -U travis;
+  - psql -c 'create database email;' -U postgres;
+  - sudo psql -c 'create database login;' -U postgres;
