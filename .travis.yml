@@ -1,5 +1,5 @@
 arch: ppc64le
-dist: bionic
+dist: xenial
 
 services:
   - postgresql
