@@ -1,5 +1,5 @@
 os: osx
-language: ruby
+osx_image: xcode12
 install: true
 script: true
 rvm:
