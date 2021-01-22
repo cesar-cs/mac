@@ -11,3 +11,7 @@ rvm:
 - 2.7.0
 - 2.7.1
 - ruby-head
+
+script:
+  - rvm version
+  
