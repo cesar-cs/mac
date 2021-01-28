@@ -1,5 +1,5 @@
 os: osx
-osx_image: xcode12
+osx_image: xcodervm
 install: true
 script: true
 rvm:
