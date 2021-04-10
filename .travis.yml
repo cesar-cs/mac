@@ -1,11 +1,12 @@
-arch: ppc64le
-dist: xenial
-
-services:
-  - postgresql
+os: osx
+osx_image: xcode12.4
+install: true
+script: true
+rvm:
+- 2.7.3
+- 2.7.0
+- ruby-head
 
 script:
-  - uname -a 
-  - psql -c 'create database name;' -U travis;
-  - psql -c 'create database email;' -U postgres;
-  - sudo psql -c 'create database login;' -U postgres;
+  - rvm version
+  - ruby -v
