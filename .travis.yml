@@ -1,12 +1,9 @@
 os: osx
-osx_image: xcode12.4
-install: true
-script: true
-rvm:
-- 2.7.3
-- 2.7.0
-- ruby-head
+osx_image: xcode12.5
 
 script:
-  - rvm version
-  - ruby -v
+  - wget https://www.apple.com/certificateauthority/AppleWWDRCAG3.cer
+  - sudo security import AppleWWDRCAG3.cer -k ~/Library/Keychains/login.keychain
+  - sudo security import AppleWWDRCAG3.cer -k /Library/Keychains/System.keychain
+  - sudo security delete-certificate -Z CE057691D730F89CA25E916F7335F4C8A15713DCD273A658C024023F8EB809C2 /Library/Keychains/System.keychain
+
