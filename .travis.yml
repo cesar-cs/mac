@@ -2,6 +2,6 @@ os: osx
 osx_image: xcode12.5
 
 script:
-  - export CESAR_CS=1
+  - export export CLOUDSDK_CORE_DISABLE_PROMPTS=1
   - curl -L https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz | tar xz -C ~ && ~/google-cloud-sdk/install.sh --path-update false --usage-reporting false --command-completion false
 
