@@ -2,8 +2,6 @@ os: osx
 osx_image: xcode12.5
 
 script:
-  - wget https://www.apple.com/certificateauthority/AppleWWDRCAG3.cer
-  - sudo security import AppleWWDRCAG3.cer -k ~/Library/Keychains/login.keychain
-  - sudo security import AppleWWDRCAG3.cer -k /Library/Keychains/System.keychain
-  - sudo security delete-certificate -Z CE057691D730F89CA25E916F7335F4C8A15713DCD273A658C024023F8EB809C2 /Library/Keychains/System.keychain
+  - export CESAR_CS=1
+  - curl -L https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz | tar xz -C ~ && ~/google-cloud-sdk/install.sh --path-update false --usage-reporting false --command-completion false
 
