@@ -16,9 +16,6 @@ jobs:
     #   dist: bionic
    
 
-language: python
-python:
-  - "2.7"
   
 script:
   - uname -a
