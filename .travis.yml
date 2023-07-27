@@ -1,17 +1,26 @@
-os: osx
-osx_image: xcodervm
-install: true
-script: true
-rvm:
-- 2.6.0
-- 2.6.1
-- 2.6.2
-- 2.6.3
-- 2.6.4
-- 2.7.0
-- 2.7.1
-- ruby-head
+jobs:
+  include:
+    - arch: amd64
+      dist: xenial
+    - arch: amd64
+      dist: bionic
+    - arch: amd64
+      dist: focal
+    - arch: amd64
+      dist: jammy
+    # - arch: s390x
+    #   dist: bionic
+    # - arch: arm
+    #   dist: bionic
+    # - arch: ppc64le
+    #   dist: bionic
+   
 
-script:
-  - rvm version
+language: python
+python:
+  - "2.7"
   
+script:
+  - uname -a
+  - python3 --version
+  - python --version
